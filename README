@@ -1,0 +1,108 @@
+db4.7
+------------------------------------------
+Oracle Berkeley DB version 4.7
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  tcl-8.4.18-1	(for Tcl bindings)
+
+Additional build requirements:
+  autoconf2.5-2.61-1
+  binutils-20080523-2
+  cygport-0.3.13-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libtool-2.2.2-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.oracle.com/technology/products/berkeley-db/db/index.html
+
+Canonical download:
+  http://download.oracle.com/berkeley-db/
+
+-------------------------------------------
+
+Build instructions:
+  unpack db4.7-4.7.25-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./db4.7-4.7.25-X.cygport all
+
+This will create:
+  /usr/src/db4.7-4.7.25-X-src.tar.bz2
+  /usr/src/db4.7-4.7.25-X.tar.bz2
+  /usr/src/db4.7-doc-4.7.25-X.tar.bz2
+  /usr/src/libdb4.7-4.7.25-X.tar.bz2
+  /usr/src/libdb4.7-devel-4.7.25-X.tar.bz2
+  /usr/src/tcl-db4.7-4.7.25-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(db4.7)
+  /usr/bin/db4.7_archive.exe
+  /usr/bin/db4.7_checkpoint.exe
+  /usr/bin/db4.7_codegen.exe
+  /usr/bin/db4.7_deadlock.exe
+  /usr/bin/db4.7_dump.exe
+  /usr/bin/db4.7_hotbackup.exe
+  /usr/bin/db4.7_load.exe
+  /usr/bin/db4.7_printlog.exe
+  /usr/bin/db4.7_recover.exe
+  /usr/bin/db4.7_stat.exe
+  /usr/bin/db4.7_upgrade.exe
+  /usr/bin/db4.7_verify.exe
+  /usr/share/doc/db4.7-4.7.25/LICENSE
+  /usr/share/doc/db4.7-4.7.25/README
+
+(libdb4.7)
+  /usr/bin/cygdb-4.7.dll
+  /usr/bin/cygdb_cxx-4.7.dll
+
+(tcl-db4.7)
+  /usr/lib/tcl8.4/db4.7/cygdb_tcl-4.7.dll
+  /usr/lib/tcl8.4/db4.7/pkgIndex.tcl
+
+(libdb4.7-devel)
+  /etc/postinstall/libdb4.7-devel.sh
+  /etc/preremove/libdb4.7-devel.sh
+  /usr/include/db4.7/db.h
+  /usr/include/db4.7/db_185.h
+  /usr/include/db4.7/db_cxx.h
+  /usr/lib/libdb-4.7.a
+  /usr/lib/libdb-4.7.dll.a
+  /usr/lib/libdb-4.7.la
+  /usr/lib/libdb_cxx-4.7.a
+  /usr/lib/libdb_cxx-4.7.dll.a
+  /usr/lib/libdb_cxx-4.7.la
+
+(db4.7-doc)
+  /usr/share/doc/db4.7-4.7.25/html/api_c/*
+  /usr/share/doc/db4.7-4.7.25/html/api_cxx/*
+  /usr/share/doc/db4.7-4.7.25/html/api_tcl/*
+  /usr/share/doc/db4.7-4.7.25/html/collections/tutorial/*
+  /usr/share/doc/db4.7-4.7.25/html/gsg/C/*
+  /usr/share/doc/db4.7-4.7.25/html/gsg/CXX/*
+  /usr/share/doc/db4.7-4.7.25/html/gsg/JAVA/*
+  /usr/share/doc/db4.7-4.7.25/html/images/*
+  /usr/share/doc/db4.7-4.7.25/html/index.html
+  /usr/share/doc/db4.7-4.7.25/html/java/*
+  /usr/share/doc/db4.7-4.7.25/html/ref/*/*
+  /usr/share/doc/db4.7-4.7.25/html/utility/*
+
+------------------
+
+Port Notes:
+
+----- version 4.7.25-1 -----
+Initial release of 4.7 branch.
+Java bindings are not included due to dependency on Java 1.5.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
