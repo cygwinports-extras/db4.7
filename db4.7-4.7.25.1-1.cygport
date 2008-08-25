@@ -1,0 +1,3 @@
+inherit tcl berkdb
+
+PATCH_URI+=" 4.7-java.patch 4.7-tcl.patch"
