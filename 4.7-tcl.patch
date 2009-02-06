@@ -1,34 +1,5 @@
 --- origsrc/db-4.7.25/dist/aclocal/tcl.m4	2005-06-28 15:45:25.000000000 -0500
 +++ src/db-4.7.25/dist/aclocal/tcl.m4	2008-07-10 21:19:01.984375000 -0500
-@@ -50,7 +50,7 @@
- 
- 	    # First check to see if --with-tclconfig was specified.
- 	    if test "${with_tclconfig}" != no; then
--		if test -f "${with_tclconfig}/tclConfig.sh" ; then
-+		if test -e "${with_tclconfig}/tclConfig.sh" ; then
- 		    ac_cv_c_tclconfig=`(cd ${with_tclconfig}; pwd)`
- 		else
- 		    AC_MSG_ERROR([${with_tclconfig} directory doesn't contain tclConfig.sh])
-@@ -59,8 +59,8 @@
- 
- 	    # check in a few common install locations
- 	    if test x"${ac_cv_c_tclconfig}" = x ; then
--		for i in `ls -d /usr/local/lib 2>/dev/null` ; do
--		    if test -f "$i/tclConfig.sh" ; then
-+		for i in `ls -d /usr/lib /usr/local/lib 2>/dev/null` ; do
-+		    if test -e "$i/tclConfig.sh" ; then
- 			ac_cv_c_tclconfig=`(cd $i; pwd)`
- 			break
- 		    fi
-@@ -80,7 +80,7 @@
- AC_DEFUN(SC_LOAD_TCLCONFIG, [
- 	AC_MSG_CHECKING([for existence of $TCL_BIN_DIR/tclConfig.sh])
- 
--	if test -f "$TCL_BIN_DIR/tclConfig.sh" ; then
-+	if test -e "$TCL_BIN_DIR/tclConfig.sh" ; then
- 		AC_MSG_RESULT([loading])
- 		. $TCL_BIN_DIR/tclConfig.sh
- 	else
 @@ -110,7 +110,7 @@
  	aix4.[[2-9]].*)
  		LIBTSO_LIBS="$LIBTSO_LIBS $TCL_LIB_SPEC $TCL_LIB_FLAG"
